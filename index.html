@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>芷月閣東方占卜 - Zhi-Yue Pavilion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --lishu: "LiSu", "STLiti", "隸書", "Noto Serif TC", serif;
+            --kaiti: "標楷體", "BiauKai", "DFKai-SB", "KaiTi", "KaiTi_GB2312", serif;
+        }
+        body {
+            font-family: var(--lishu);
+            background-color: #1a1a1a;
+            color: #e0d5c0;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .lishu-font {
+            font-family: var(--lishu);
+        }
+        .kaiti-font {
+            font-family: var(--kaiti);
+        }
+        .brush-font {
+            font-family: 'Ma Shan Zheng', cursive;
+        }
+        /* Mystical Ink Wash / Parchment Background */
+        .mystic-bg {
+            background-color: #1a1a1a;
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(45, 30, 20, 0.8) 0%, rgba(20, 20, 20, 1) 100%),
+                url('https://www.transparenttextures.com/patterns/handmade-paper.png');
+            background-attachment: fixed;
+        }
+        .oriental-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 30c0-10 10-10 10-20S30 0 30 0 20 0 20 10s10 10 10 20z' fill='%23d4af37' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .ink-border {
+            border: 2px solid #3d3028;
+            position: relative;
+        }
+        .ink-border::after {
+            content: '';
+            position: absolute;
+            inset: 2px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            pointer-events: none;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+</head>
+<body class="mystic-bg">
+    <div id="root"></div>
+</body>
+</html>
